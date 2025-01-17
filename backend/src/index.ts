@@ -2,8 +2,13 @@ import express from 'express';
 import cors from 'cors'; 
 import dotenv from 'dotenv';
 import userRoutes from '../src/routes/userRoutes'
+import 'express-async-errors';
+import  connectDB  from './utils/db';
 
 dotenv.config();
+
+// Connect to MongoDB
+connectDB();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -14,7 +19,7 @@ app.use(express.json());
 
 app.use('/api', userRoutes); // Prefix all routes with /api
 
-app.get('/', (req,res)=>{
+app.get('/', (_,res)=>{
     res.send("Hellow worl")
 });
 
