@@ -1,9 +1,10 @@
 import axios from "axios";
 
-const API_URL = process.env.BASE_URL as string;
+const API_URL = import.meta.env.VITE_BASE_URL as string;
 
 export const getUsers = async () => {
     const response = await axios.get(API_URL);
+    console.log(API_URL)
     return response.data;
 };
 
