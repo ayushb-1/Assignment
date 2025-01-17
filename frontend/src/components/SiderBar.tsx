@@ -1,4 +1,4 @@
-import React, {useState, useMemo} from 'react';
+import {useState, useMemo} from 'react';
 import { Search } from 'lucide-react';
 
 const hobbies = ['Reading', 'Traveling', 'Cooking', 'Gaming', 'Photography', 'Painting', 'Writing', 'Music', 'Dancing', 'Hiking'];

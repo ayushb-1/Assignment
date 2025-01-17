@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useCallback} from 'react';
+import React, {useEffect, useCallback} from 'react';
 import ReactFlow, {
     Controls,
     Background,
@@ -107,7 +107,7 @@ const UserFlow: React.FC = () => {
             let hobbyEdges: any[] = [];
 
             users.forEach((user: any) => {
-                (user.hobbies || []).forEach((hobby: string, index: number) => {
+                (user.hobbies || []).forEach((hobby: string) => {
                     const hobbyNodeId = `${user._id}-hobby-${hobby}`;
                     hobbyNodes.push({
                         id: hobbyNodeId,
