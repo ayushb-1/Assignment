@@ -3,6 +3,7 @@ import axios from "axios";
 const API_URL = import.meta.env.VITE_BASE_URL as string;
 
 export const getUsers = async () => {
+    console.log(API_URL)
     const response = await axios.get(API_URL);
     console.log(API_URL)
     return response.data;
